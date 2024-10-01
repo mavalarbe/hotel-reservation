@@ -1,6 +1,5 @@
 package org.example.hotelreservation.facade;
 
-import lombok.RequiredArgsConstructor;
 import org.example.hotelreservation.model.Reservation;
 import org.example.hotelreservation.model.Room;
 import org.example.hotelreservation.observer.EmailNotifier;

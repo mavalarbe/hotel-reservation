@@ -6,7 +6,6 @@ import org.example.hotelreservation.model.ReservationStatus;
 import org.example.hotelreservation.observer.ReservationObserver;
 import org.example.hotelreservation.observer.ReservationSubject;
 import org.example.hotelreservation.repository.ReservationRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -20,7 +19,7 @@ import static org.example.hotelreservation.controller.APIConstants.EXCEPTION_RES
 public class ReservationManager implements ReservationSubject {
 
     private final ReservationRepository reservationRepository;
-    private List<ReservationObserver> observers = new ArrayList<>();
+    private final List<ReservationObserver> observers = new ArrayList<>();
 
     @Override
     public void addObserver(ReservationObserver observer) {

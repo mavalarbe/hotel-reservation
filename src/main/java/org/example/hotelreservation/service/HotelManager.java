@@ -28,6 +28,6 @@ public class HotelManager {
         return roomRepository.findAvailableRooms(checkIn, checkOut);
     }
     public Room find(Long id) throws Exception {
-        return roomRepository.findById(id).orElseThrow(() -> new Exception());
+        return roomRepository.findById(id).orElseThrow(Exception::new);
     }
 }
